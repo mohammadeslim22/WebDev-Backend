@@ -1,20 +1,23 @@
-const Sequelize = require('sequelize')
+const Sequelize = require("sequelize");
 
-module.exports = sequelize.define("Car", {
+module.exports = sequelize.define(
+  "Car",
+  {
     id: {
-        type: Sequelize.INTEGER(11),
-        allowNull: false,
-        autoIncrement: true,
-        primaryKey: true
+      type: Sequelize.INTEGER(11),
+      allowNull: false,
+      autoIncrement: true,
+      primaryKey: true,
     },
     carNumber: {
-        type: Sequelize.STRING(10),
-        allowNull: false,
-        unique: true
+      type: Sequelize.STRING(10),
+      allowNull: false,
+      unique: true,
     },
 
     status: {
-        type: Sequelize.INTEGER(1),
-        
+      type: Sequelize.INTEGER(1),
     },
-}, {underscored: true})
+  },
+  { underscored: true }
+);
